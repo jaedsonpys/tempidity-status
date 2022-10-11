@@ -9,6 +9,7 @@ const int buzzerFreq = 1500;
 
 void lowAlert();
 void mediumAlert();
+void highAlert();
 
 void setup() {
     pinMode(redLed, OUTPUT);
@@ -41,5 +42,18 @@ void mediumAlert() {
         noTone(buzzerPin);
         analogWrite(blueLed, 0);
         delay(500);
+    }
+}
+
+void highAlert() {
+    for(int i = 0; i < 3; i++) {
+        analogWrite(redLed, 255);
+        tone(buzzerPin, buzzerFreq);
+        
+        delay(200);
+
+        noTone(buzzerPin);
+        analogWrite(blueLed, 0);
+        delay(200);
     }
 }
