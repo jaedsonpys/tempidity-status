@@ -46,14 +46,14 @@ void mediumAlert() {
 }
 
 void highAlert() {
-    for(int i = 0; i < 3; i++) {
+    for(int i = 0; i < 4; i++) {
         analogWrite(redLed, 255);
         tone(buzzerPin, buzzerFreq);
         
-        delay(200);
+        delay(100);
 
         noTone(buzzerPin);
-        analogWrite(blueLed, 0);
-        delay(200);
+        analogWrite(redLed, 0);
+        delay(100);
     }
 }
