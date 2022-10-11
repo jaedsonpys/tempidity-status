@@ -27,7 +27,7 @@ void lowAlert() {
         analogWrite(greenLed, 255);        
         delay(500);
         analogWrite(greenLed, 0);
-        delay(1000);
+        delay(500);
     }
 }
 
@@ -40,6 +40,6 @@ void mediumAlert() {
 
         noTone(buzzerPin);
         analogWrite(blueLed, 0);
-        delay(1000);
+        delay(500);
     }
 }
