@@ -1,8 +1,10 @@
 #include "Arduino.h"
+#include <DHT.h>
 
 const int redLed = 19;
 const int greenLed = 15;
 const int blueLed = 4;
+const int dhtPin = 18;
 
 const int buzzerPin = 23;
 const int buzzerFreq = 1500;
@@ -11,12 +13,18 @@ void lowAlert();
 void mediumAlert();
 void highAlert();
 
+DHT dht(dhtPin, DHT11);
+
 void setup() {
+    Serial.begin(9600);
+
     pinMode(redLed, OUTPUT);
     pinMode(greenLed, OUTPUT);
     pinMode(blueLed, OUTPUT);
 
     pinMode(buzzerPin, OUTPUT);
+
+    dht.begin();
 }
 
 void loop() {
