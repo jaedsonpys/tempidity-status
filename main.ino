@@ -32,7 +32,7 @@ void lowAlert() {
 }
 
 void mediumAlert() {
-    for(int i = 0; i < 1; i++) {
+    for(int i = 0; i < 2; i++) {
         analogWrite(blueLed, 255);
         tone(buzzerPin, buzzerFreq);
         
