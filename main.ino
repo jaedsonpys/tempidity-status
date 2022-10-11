@@ -9,6 +9,14 @@ const int dhtPin = 18;
 const int buzzerPin = 23;
 const int buzzerFreq = 1500;
 
+// temperature control (in C°)
+const int temperatureMin = 20;
+const int temperatureMax = 35;
+
+// humidity control (in %)
+const int humidityMin = 40;
+const int humidityMax = 80;
+
 void lowAlert();
 void mediumAlert();
 void highAlert();
