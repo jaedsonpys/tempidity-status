@@ -36,7 +36,24 @@ void setup() {
 }
 
 void loop() {
+    float temperature = dht.readTemperature();
+    float humidity = dht.readHumidity();
 
+    Serial.print("Temperature: ");
+    Serial.println(temperature);
+    Serial.print("Humidity: ");
+    Serial.println(humidity);
+
+    bool temperatureCondition = temperature > temperatureMin && temperature < temperature;
+    bool humidityCondition = humidity > humidityMin && humidity < humidityMax;
+
+    if(temperatureCondition || humidityCondition) {
+        lowAlert();
+        delay(5000);
+    } else {
+        highAlert();
+        delay(2500);
+    }
 }
 
 void lowAlert() {
