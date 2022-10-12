@@ -9,3 +9,7 @@ Monitor air temperature and humidity using Arduino or ESP32 Dev Module and a **D
 - RGB led module;
 - Buzzer;
 - Wires.
+
+## License
+
+This project uses the `MIT License`, please [see the LICENSE file](https://github.com/jaedsonpys/tempidity-status/blob/master/LICENSE) to more details.
